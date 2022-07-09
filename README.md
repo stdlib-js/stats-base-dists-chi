@@ -53,7 +53,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.chi;
+})();
 })();
 </script>
 ```
@@ -141,9 +143,11 @@ var mu = dist.mean;
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 console.log( objectKeys( chi ) );
 
+})();
 })();
 </script>
 </body>
@@ -235,29 +239,29 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <toc-links> -->
 
-[@stdlib/stats/base/dists/chi/ctor]: https://github.com/stdlib-js/stats-base-dists-chi-ctor/tree/umd
+[@stdlib/stats/base/dists/chi/ctor]: https://github.com/stdlib-js/stats-base-dists-chi-ctor/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/entropy]: https://github.com/stdlib-js/stats-base-dists-chi-entropy/tree/umd
+[@stdlib/stats/base/dists/chi/entropy]: https://github.com/stdlib-js/stats-base-dists-chi-entropy/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/kurtosis]: https://github.com/stdlib-js/stats-base-dists-chi-kurtosis/tree/umd
+[@stdlib/stats/base/dists/chi/kurtosis]: https://github.com/stdlib-js/stats-base-dists-chi-kurtosis/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/mean]: https://github.com/stdlib-js/stats-base-dists-chi-mean/tree/umd
+[@stdlib/stats/base/dists/chi/mean]: https://github.com/stdlib-js/stats-base-dists-chi-mean/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/mode]: https://github.com/stdlib-js/stats-base-dists-chi-mode/tree/umd
+[@stdlib/stats/base/dists/chi/mode]: https://github.com/stdlib-js/stats-base-dists-chi-mode/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/skewness]: https://github.com/stdlib-js/stats-base-dists-chi-skewness/tree/umd
+[@stdlib/stats/base/dists/chi/skewness]: https://github.com/stdlib-js/stats-base-dists-chi-skewness/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/stdev]: https://github.com/stdlib-js/stats-base-dists-chi-stdev/tree/umd
+[@stdlib/stats/base/dists/chi/stdev]: https://github.com/stdlib-js/stats-base-dists-chi-stdev/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/variance]: https://github.com/stdlib-js/stats-base-dists-chi-variance/tree/umd
+[@stdlib/stats/base/dists/chi/variance]: https://github.com/stdlib-js/stats-base-dists-chi-variance/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/cdf]: https://github.com/stdlib-js/stats-base-dists-chi-cdf/tree/umd
+[@stdlib/stats/base/dists/chi/cdf]: https://github.com/stdlib-js/stats-base-dists-chi-cdf/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/logpdf]: https://github.com/stdlib-js/stats-base-dists-chi-logpdf/tree/umd
+[@stdlib/stats/base/dists/chi/logpdf]: https://github.com/stdlib-js/stats-base-dists-chi-logpdf/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/pdf]: https://github.com/stdlib-js/stats-base-dists-chi-pdf/tree/umd
+[@stdlib/stats/base/dists/chi/pdf]: https://github.com/stdlib-js/stats-base-dists-chi-pdf/tree/umd/tree/umd
 
-[@stdlib/stats/base/dists/chi/quantile]: https://github.com/stdlib-js/stats-base-dists-chi-quantile/tree/umd
+[@stdlib/stats/base/dists/chi/quantile]: https://github.com/stdlib-js/stats-base-dists-chi-quantile/tree/umd/tree/umd
 
 <!-- </toc-links> -->
 
