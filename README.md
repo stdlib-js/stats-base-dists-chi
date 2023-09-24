@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
+import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.1.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
+import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.1.0-deno/mod.js';
 ```
 
 #### chi
@@ -128,7 +128,7 @@ var mu = dist.mean;
 
 ```javascript
 import objectKeys from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-keys@deno/mod.js';
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
+import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.1.0-deno/mod.js';
 
 console.log( objectKeys( chi ) );
 ```
