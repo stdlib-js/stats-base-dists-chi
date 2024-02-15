@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@esm/index.mjs';
+import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.2.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@esm/index.mjs';
+import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.2.0-esm/index.mjs';
 ```
 
 #### chi
@@ -133,7 +133,7 @@ var mu = dist.mean;
 <script type="module">
 
 import objectKeys from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-keys@esm/index.mjs';
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@esm/index.mjs';
+import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.2.0-esm/index.mjs';
 
 console.log( objectKeys( chi ) );
 
