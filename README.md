@@ -35,20 +35,32 @@ limitations under the License.
 
 > Chi distribution.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-chi
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
+var chi = require( '@stdlib/stats-base-dists-chi' );
 ```
 
 #### chi
@@ -106,7 +118,7 @@ The namespace contains a constructor function for creating a [Chi][chi-distribut
 <!-- </toc> -->
 
 ```javascript
-var Chi = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi' ).Chi;
+var Chi = require( '@stdlib/stats-base-dists-chi' ).Chi;
 
 var dist = new Chi( 4.0 );
 
@@ -125,14 +137,16 @@ var mu = dist.mean;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var chiRandomFactory = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-chi' ).factory;
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-variance@deno/mod.js';
-import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
-import rayleigh from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-rayleigh@deno/mod.js';
-import mean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-mean@deno/mod.js';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
+var chiRandomFactory = require( '@stdlib/random-base-chi' ).factory;
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var variance = require( '@stdlib/stats-base-variance' );
+var linspace = require( '@stdlib/array-base-linspace' );
+var rayleigh = require( '@stdlib/stats-base-dists-rayleigh' );
+var absdiff = require( '@stdlib/math-base-utils-absolute-difference' );
+var mean = require( '@stdlib/stats-base-mean' );
+var abs = require( '@stdlib/math-base-special-abs' );
+var max = require( '@stdlib/math-base-special-max' );
+var chi = require( '@stdlib/stats-base-dists-chi' );
 
 // Define the degrees of freedom parameter:
 var k = 2;
@@ -149,9 +163,9 @@ var chiCDF = chi.cdf.factory( k );
 var cdf = filledarrayBy( x.length, 'float64', chiCDF );
 
 // Output the PDF and CDF values:
-console.log( 'x values:', x );
-console.log( 'PDF values:', pdf );
-console.log( 'CDF values:', cdf );
+console.log( 'x values: ', x );
+console.log( 'PDF values: ', pdf );
+console.log( 'CDF values: ', cdf );
 
 // Compute statistical properties:
 var theoreticalMean = chi.mean( k );
@@ -159,10 +173,10 @@ var theoreticalVariance = chi.variance( k );
 var theoreticalSkewness = chi.skewness( k );
 var theoreticalKurtosis = chi.kurtosis( k );
 
-console.log( 'Theoretical Mean:', theoreticalMean );
-console.log( 'Theoretical Variance:', theoreticalVariance );
-console.log( 'Skewness:', theoreticalSkewness );
-console.log( 'Kurtosis:', theoreticalKurtosis );
+console.log( 'Theoretical Mean: ', theoreticalMean );
+console.log( 'Theoretical Variance: ', theoreticalVariance );
+console.log( 'Skewness: ', theoreticalSkewness );
+console.log( 'Kurtosis: ', theoreticalKurtosis );
 
 // Generate random samples from the Chi distribution:
 var rchi = chiRandomFactory( k );
@@ -173,12 +187,12 @@ var samples = filledarrayBy( n, 'float64', rchi );
 var sampleMean = mean( n, samples, 1 );
 var sampleVariance = variance( n, 1, samples, 1 );
 
-console.log( 'Sample Mean:', sampleMean );
-console.log( 'Sample Variance:', sampleVariance );
+console.log( 'Sample Mean: ', sampleMean );
+console.log( 'Sample Variance: ', sampleVariance );
 
 // Compare sample statistics to theoretical values:
-console.log( 'Difference in Mean:', abs( theoreticalMean - sampleMean ) );
-console.log( 'Difference in Variance:', abs( theoreticalVariance - sampleVariance ) );
+console.log( 'Difference in Mean: ', abs( theoreticalMean - sampleMean ) );
+console.log( 'Difference in Variance: ', abs( theoreticalVariance - sampleVariance ) );
 
 // Demonstrate the relationship with the Rayleigh distribution when k=2:
 var rayleighPDF = rayleigh.pdf.factory( 1.0 );
@@ -196,17 +210,13 @@ var diffPDF;
 var diffCDF;
 var i;
 for ( i = 0; i < x.length; i++ ) {
-    diffPDF = abs( pdf[ i ] - rayleighPDFValues[ i ] );
-    if ( diffPDF > maxDiffPDF ) {
-        maxDiffPDF = diffPDF;
-    }
-    diffCDF = abs( cdf[ i ] - rayleighCDFValues[ i ] );
-    if ( diffCDF > maxDiffCDF ) {
-        maxDiffCDF = diffCDF;
-    }
+    diffPDF = absdiff( pdf[ i ], rayleighPDFValues[ i ] );
+    maxDiffPDF = max( maxDiffPDF, diffPDF );
+    diffCDF = absdiff( cdf[ i ], rayleighCDFValues[ i ] );
+    maxDiffCDF = max( maxDiffCDF, diffCDF );
 }
-console.log( 'Maximum difference between Chi(k=2) PDF and Rayleigh PDF:', maxDiffPDF );
-console.log( 'Maximum difference between Chi(k=2) CDF and Rayleigh CDF:', maxDiffCDF );
+console.log( 'Maximum difference between Chi(k=2) PDF and Rayleigh PDF: ', maxDiffPDF );
+console.log( 'Maximum difference between Chi(k=2) CDF and Rayleigh CDF: ', maxDiffCDF );
 ```
 
 </section>
@@ -230,7 +240,7 @@ console.log( 'Maximum difference between Chi(k=2) CDF and Rayleigh CDF:', maxDif
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -297,29 +307,29 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <toc-links> -->
 
-[@stdlib/stats/base/dists/chi/ctor]: https://github.com/stdlib-js/stats-base-dists-chi-ctor/tree/deno
+[@stdlib/stats/base/dists/chi/ctor]: https://github.com/stdlib-js/stats-base-dists-chi-ctor
 
-[@stdlib/stats/base/dists/chi/entropy]: https://github.com/stdlib-js/stats-base-dists-chi-entropy/tree/deno
+[@stdlib/stats/base/dists/chi/entropy]: https://github.com/stdlib-js/stats-base-dists-chi-entropy
 
-[@stdlib/stats/base/dists/chi/kurtosis]: https://github.com/stdlib-js/stats-base-dists-chi-kurtosis/tree/deno
+[@stdlib/stats/base/dists/chi/kurtosis]: https://github.com/stdlib-js/stats-base-dists-chi-kurtosis
 
-[@stdlib/stats/base/dists/chi/mean]: https://github.com/stdlib-js/stats-base-dists-chi-mean/tree/deno
+[@stdlib/stats/base/dists/chi/mean]: https://github.com/stdlib-js/stats-base-dists-chi-mean
 
-[@stdlib/stats/base/dists/chi/mode]: https://github.com/stdlib-js/stats-base-dists-chi-mode/tree/deno
+[@stdlib/stats/base/dists/chi/mode]: https://github.com/stdlib-js/stats-base-dists-chi-mode
 
-[@stdlib/stats/base/dists/chi/skewness]: https://github.com/stdlib-js/stats-base-dists-chi-skewness/tree/deno
+[@stdlib/stats/base/dists/chi/skewness]: https://github.com/stdlib-js/stats-base-dists-chi-skewness
 
-[@stdlib/stats/base/dists/chi/stdev]: https://github.com/stdlib-js/stats-base-dists-chi-stdev/tree/deno
+[@stdlib/stats/base/dists/chi/stdev]: https://github.com/stdlib-js/stats-base-dists-chi-stdev
 
-[@stdlib/stats/base/dists/chi/variance]: https://github.com/stdlib-js/stats-base-dists-chi-variance/tree/deno
+[@stdlib/stats/base/dists/chi/variance]: https://github.com/stdlib-js/stats-base-dists-chi-variance
 
-[@stdlib/stats/base/dists/chi/cdf]: https://github.com/stdlib-js/stats-base-dists-chi-cdf/tree/deno
+[@stdlib/stats/base/dists/chi/cdf]: https://github.com/stdlib-js/stats-base-dists-chi-cdf
 
-[@stdlib/stats/base/dists/chi/logpdf]: https://github.com/stdlib-js/stats-base-dists-chi-logpdf/tree/deno
+[@stdlib/stats/base/dists/chi/logpdf]: https://github.com/stdlib-js/stats-base-dists-chi-logpdf
 
-[@stdlib/stats/base/dists/chi/pdf]: https://github.com/stdlib-js/stats-base-dists-chi-pdf/tree/deno
+[@stdlib/stats/base/dists/chi/pdf]: https://github.com/stdlib-js/stats-base-dists-chi-pdf
 
-[@stdlib/stats/base/dists/chi/quantile]: https://github.com/stdlib-js/stats-base-dists-chi-quantile/tree/deno
+[@stdlib/stats/base/dists/chi/quantile]: https://github.com/stdlib-js/stats-base-dists-chi-quantile
 
 <!-- </toc-links> -->
 
