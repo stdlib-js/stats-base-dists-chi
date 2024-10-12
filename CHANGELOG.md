@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-10-11)
+## Unreleased (2024-10-12)
 
 <section class="packages">
 
@@ -33,6 +33,7 @@ A total of 2 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`43e7a33`](https://github.com/stdlib-js/stdlib/commit/43e7a3386606e54475e872d24ddf11fa6c122c42) - **chore:** minor clean-up after code review _(by Philipp Burckhardt)_
 -   [`f0ab00b`](https://github.com/stdlib-js/stdlib/commit/f0ab00bf081e55b928de80320c75dc42e713ad3d) - **docs:** improve README examples of `stats/base/dists/chi` namespace [(#1803)](https://github.com/stdlib-js/stdlib/pull/1803) _(by Shivam, Philipp Burckhardt)_
 
 </details>
