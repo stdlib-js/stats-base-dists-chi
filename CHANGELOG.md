@@ -4,12 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-09)
+## Unreleased (2025-07-01)
 
 <section class="features">
 
 ### Features
 
+-   [`3109ba5`](https://github.com/stdlib-js/stdlib/commit/3109ba5061cbdfd2c95258aafc8bf42884e6691c) - add C implementation for `stats/base/dists/chi/cdf`
+-   [`6cfd0be`](https://github.com/stdlib-js/stdlib/commit/6cfd0be5c0bc3fa6dcf23629975a7971f4bbb776) - add C implementation for `stats/base/dists/chi/kurtosis`
+-   [`26936b8`](https://github.com/stdlib-js/stdlib/commit/26936b8c598cb1461ca4a6b6a237db95b16605b1) - add C implementation for `stats/base/dists/chi/skewness`
+-   [`a79528c`](https://github.com/stdlib-js/stdlib/commit/a79528cdc868d7ad54312192e561288503793b0b) - add C implementation for `stats/base/dists/chi/logpdf` [(#4527)](https://github.com/stdlib-js/stdlib/pull/4527)
+-   [`b02b1dc`](https://github.com/stdlib-js/stdlib/commit/b02b1dcda79311b83e803051d3f396f2b3d43874) - add C implementation for `stats/base/dists/chi/pdf` [(#4526)](https://github.com/stdlib-js/stdlib/pull/4526)
 -   [`053722e`](https://github.com/stdlib-js/stdlib/commit/053722e28d6b086a08fc017948ae364976d9601c) - **stats:** add C implementation for `stats/base/dists/chi/stdev` [(#4590)](https://github.com/stdlib-js/stdlib/pull/4590)
 -   [`8b7ddc2`](https://github.com/stdlib-js/stdlib/commit/8b7ddc2cdc3dd40b27d7ef9f2a2a5729a4f5c3aa) - **stats:** add C implementation for `stats/base/dists/chi/variance` [(#4591)](https://github.com/stdlib-js/stdlib/pull/4591)
 -   [`9e43626`](https://github.com/stdlib-js/stdlib/commit/9e436263a3b0cf8c54da48f9c73cc94826baa57e) - add C implementation for `stats/base/dists/chi/mean` [(#4514)](https://github.com/stdlib-js/stdlib/pull/4514)
@@ -20,13 +25,23 @@
 
 <!-- /.features -->
 
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`1a48ebb`](https://github.com/stdlib-js/stdlib/commit/1a48ebbacff02aa8f374081b3b636bc2c0a027ef) - use correct Makefile for examples/c
+
+</section>
+
+<!-- /.bug-fixes -->
+
 <section class="issues">
 
 ### Closed Issues
 
-A total of 5 issues were closed in this release:
+A total of 8 issues were closed in this release:
 
-[#3490](https://github.com/stdlib-js/stdlib/issues/3490), [#3493](https://github.com/stdlib-js/stdlib/issues/3493), [#3494](https://github.com/stdlib-js/stdlib/issues/3494), [#3498](https://github.com/stdlib-js/stdlib/issues/3498), [#3499](https://github.com/stdlib-js/stdlib/issues/3499)
+[#3490](https://github.com/stdlib-js/stdlib/issues/3490), [#3492](https://github.com/stdlib-js/stdlib/issues/3492), [#3493](https://github.com/stdlib-js/stdlib/issues/3493), [#3494](https://github.com/stdlib-js/stdlib/issues/3494), [#3495](https://github.com/stdlib-js/stdlib/issues/3495), [#3498](https://github.com/stdlib-js/stdlib/issues/3498), [#3499](https://github.com/stdlib-js/stdlib/issues/3499), [#7415](https://github.com/stdlib-js/stdlib/issues/7415)
 
 </section>
 
@@ -38,6 +53,16 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`e342a38`](https://github.com/stdlib-js/stdlib/commit/e342a388619ab71f5222105ec94c5029e42a4458) - **refactor:** update paths _(by Gururaj Gurram)_
+-   [`a4ce77e`](https://github.com/stdlib-js/stdlib/commit/a4ce77efe910c9398e75b767fb81e786a3a04cc0) - **test:** pass in opts to skip if addon is not available _(by Philipp Burckhardt)_
+-   [`1a48ebb`](https://github.com/stdlib-js/stdlib/commit/1a48ebbacff02aa8f374081b3b636bc2c0a027ef) - **fix:** use correct Makefile for examples/c _(by Philipp Burckhardt)_
+-   [`3109ba5`](https://github.com/stdlib-js/stdlib/commit/3109ba5061cbdfd2c95258aafc8bf42884e6691c) - **feat:** add C implementation for `stats/base/dists/chi/cdf` _(by Philipp Burckhardt)_
+-   [`6cfd0be`](https://github.com/stdlib-js/stdlib/commit/6cfd0be5c0bc3fa6dcf23629975a7971f4bbb776) - **feat:** add C implementation for `stats/base/dists/chi/kurtosis` _(by Philipp Burckhardt)_
+-   [`26936b8`](https://github.com/stdlib-js/stdlib/commit/26936b8c598cb1461ca4a6b6a237db95b16605b1) - **feat:** add C implementation for `stats/base/dists/chi/skewness` _(by Philipp Burckhardt)_
+-   [`a4464fb`](https://github.com/stdlib-js/stdlib/commit/a4464fbc05304fd3607b4c0471734a239b5451cb) - **chore:** address commit comments for commit `b02b1dc` [(#7423)](https://github.com/stdlib-js/stdlib/pull/7423) _(by Lokesh Ranjan)_
+-   [`354a54b`](https://github.com/stdlib-js/stdlib/commit/354a54b69858eae98fb4b757d72ca3dde5ec1f4a) - **test:** match tolerance used for JS implementation _(by Philipp Burckhardt)_
+-   [`a79528c`](https://github.com/stdlib-js/stdlib/commit/a79528cdc868d7ad54312192e561288503793b0b) - **feat:** add C implementation for `stats/base/dists/chi/logpdf` [(#4527)](https://github.com/stdlib-js/stdlib/pull/4527) _(by Aadish Jain, Philipp Burckhardt, stdlib-bot)_
+-   [`b02b1dc`](https://github.com/stdlib-js/stdlib/commit/b02b1dcda79311b83e803051d3f396f2b3d43874) - **feat:** add C implementation for `stats/base/dists/chi/pdf` [(#4526)](https://github.com/stdlib-js/stdlib/pull/4526) _(by Aadish Jain, Philipp Burckhardt, stdlib-bot)_
 -   [`3565318`](https://github.com/stdlib-js/stdlib/commit/3565318e3639b3e44890ed15ccd73560d3cac14c) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`20dd4e8`](https://github.com/stdlib-js/stdlib/commit/20dd4e891d7fac27581eecb54240ae194d6076ab) - **test:** add missing skips for native add-on tests _(by Philipp Burckhardt)_
 -   [`b51a457`](https://github.com/stdlib-js/stdlib/commit/b51a457474fb3527c628001639fc4e1174ed45e4) - **bench:** update random value generation [(#7010)](https://github.com/stdlib-js/stdlib/pull/7010) _(by Harsh)_
@@ -72,12 +97,13 @@ A total of 5 issues were closed in this release:
 
 ### Contributors
 
-A total of 7 people contributed to this release. Thank you to the following contributors:
+A total of 8 people contributed to this release. Thank you to the following contributors:
 
 -   Aadish Jain
 -   Gururaj Gurram
 -   Harsh
 -   Karan Anand
+-   Lokesh Ranjan
 -   Philipp Burckhardt
 -   Shivam Ahir
 -   Vivek Maurya
