@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@esm/index.mjs';
+import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.3.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@esm/index.mjs';
+import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.3.0-esm/index.mjs';
 ```
 
 #### chi
@@ -139,7 +139,7 @@ import absdiff from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-utils-absol
 import mean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-mean@esm/index.mjs';
 import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
 import max from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-max@esm/index.mjs';
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@esm/index.mjs';
+import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.3.0-esm/index.mjs';
 
 // Define the degrees of freedom parameter:
 var k = 2;
