@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-dists-chi/tags). For example,
+
+```javascript
 import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.3.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.3.1-deno/mod.js';
+import { Chi, cdf, entropy, kurtosis, logpdf, mean, mode, pdf, quantile, skewness, stdev, variance } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
 ```
 
 #### chi
@@ -134,7 +139,7 @@ import absdiff from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-utils-absol
 import mean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-mean@deno/mod.js';
 import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
 import max from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-max@deno/mod.js';
-import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@v0.3.1-deno/mod.js';
+import chi from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-chi@deno/mod.js';
 
 // Define the degrees of freedom parameter:
 var k = 2;
