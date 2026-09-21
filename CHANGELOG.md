@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-02)
+## Unreleased (2026-09-21)
 
 <section class="commits">
 
@@ -12,6 +12,15 @@
 
 <details>
 
+-   [`d3eaad3`](https://github.com/stdlib-js/stdlib/commit/d3eaad35f633c731ce8112190d74bb2a7577e1e8) - **chore:** clean-up [(#15039)](https://github.com/stdlib-js/stdlib/pull/15039) _(by Philipp Burckhardt, Athan Reines)_
+-   [`586dfb1`](https://github.com/stdlib-js/stdlib/commit/586dfb171156aeceaf7f4786cef0e65bf67e5672) - **test:** migrate `stats/base/dists/chi/mean` to ULP-based assertions [(#15183)](https://github.com/stdlib-js/stdlib/pull/15183) _(by Athan Reines)_
+-   [`af2d985`](https://github.com/stdlib-js/stdlib/commit/af2d9859ef52c83148c11e0b8cf1ef886db0447c) - **test:** migrate `stats/base/dists/chi/cdf` to ULP-based assertions [(#15178)](https://github.com/stdlib-js/stdlib/pull/15178) _(by Athan Reines)_
+-   [`fd6046b`](https://github.com/stdlib-js/stdlib/commit/fd6046b62a6b8286f2b8b7d2f0c4da0825606a5d) - **test:** migrate `stats/base/dists/chi/entropy` to ULP-based assertions [(#14889)](https://github.com/stdlib-js/stdlib/pull/14889) _(by Athan Reines)_
+-   [`9edee4e`](https://github.com/stdlib-js/stdlib/commit/9edee4e5d9d587d8fba9721795c70d0018c27496) - **test:** migrate `stats/base/dists/chi/logpdf` to ULP-based assertions [(#14839)](https://github.com/stdlib-js/stdlib/pull/14839) _(by Athan Reines)_
+-   [`4825857`](https://github.com/stdlib-js/stdlib/commit/482585771c6992653a92d68540c3db39320c13f3) - **test:** migrate `stats/base/dists/chi/variance` to ULP-based assertions [(#14831)](https://github.com/stdlib-js/stdlib/pull/14831) _(by Athan Reines)_
+-   [`87e6008`](https://github.com/stdlib-js/stdlib/commit/87e60088ffb2e37acf8db259692960c99b2ec1bc) - **test:** migrate `stats/base/dists/chi/stdev` to ULP-based assertions [(#14447)](https://github.com/stdlib-js/stdlib/pull/14447) _(by Athan Reines)_
+-   [`7532132`](https://github.com/stdlib-js/stdlib/commit/75321324e281275e170879993a774e421b4fed51) - **test:** migrate `stats/base/dists/chi/pdf` to ULP-based assertions [(#14323)](https://github.com/stdlib-js/stdlib/pull/14323) _(by Athan Reines)_
+-   [`65a5d15`](https://github.com/stdlib-js/stdlib/commit/65a5d155944a423ba8d9e564fefb839c2e949544) - **test:** migrate `stats/base/dists/chi/quantile` to ULP-based assertions [(#14086)](https://github.com/stdlib-js/stdlib/pull/14086) _(by Philipp Burckhardt)_
 -   [`7ae11bc`](https://github.com/stdlib-js/stdlib/commit/7ae11bca9e05607a14425d165dfed57584b880b8) - **chore:** clean-up [(#13834)](https://github.com/stdlib-js/stdlib/pull/13834) _(by Philipp Burckhardt)_
 -   [`5dee19d`](https://github.com/stdlib-js/stdlib/commit/5dee19dbe000c3512c48f5546478b66a41a2a062) - **bench:** use consistent assertions [(#13229)](https://github.com/stdlib-js/stdlib/pull/13229) _(by Philipp Burckhardt)_
 -   [`ca49ceb`](https://github.com/stdlib-js/stdlib/commit/ca49ceb1e17979e0ecb77bc50dedd14b7515b46f) - **refactor:** rename internal variable [(#13167)](https://github.com/stdlib-js/stdlib/pull/13167) _(by Philipp Burckhardt)_
