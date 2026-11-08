@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-12)
+## Unreleased (2026-11-08)
 
 <section class="features">
 
@@ -22,6 +22,8 @@
 
 <details>
 
+-   [`8f417a2`](https://github.com/stdlib-js/stdlib/commit/8f417a28b2bd49c5630170cfe0e672f2b969fd62) - **test:** migrate `stats/base/dists/chi/skewness` to ULP-based assertions [(#15828)](https://github.com/stdlib-js/stdlib/pull/15828) _(by Athan Reines)_
+-   [`b9f139e`](https://github.com/stdlib-js/stdlib/commit/b9f139e034cd25ecfd5e4203e082df7280ceaba3) - **test:** migrate `stats/base/dists/chi/kurtosis` to ULP-based assertions [(#15895)](https://github.com/stdlib-js/stdlib/pull/15895) _(by Philipp Burckhardt)_
 -   [`3bf4053`](https://github.com/stdlib-js/stdlib/commit/3bf4053fd387bb982d401e2a3db9f61e9586a6ca) - **docs:** update example [(#15932)](https://github.com/stdlib-js/stdlib/pull/15932) _(by stdlib-bot)_
 -   [`53bcb81`](https://github.com/stdlib-js/stdlib/commit/53bcb8178d63c62ee80f1943c985e4680918dbb0) - **feat:** add C implementation for `stats/base/dists/chi/quantile` [(#14660)](https://github.com/stdlib-js/stdlib/pull/14660) _(by Philipp Burckhardt, Karan Anand)_
 -   [`fed47c5`](https://github.com/stdlib-js/stdlib/commit/fed47c5a6a1ab89ce70e546957796748b761e6dd) - **chore:** clean-up [(#15426)](https://github.com/stdlib-js/stdlib/pull/15426) _(by Philipp Burckhardt)_
